@@ -20,8 +20,8 @@ class Robo:  #identificador da classe
 ```cpp
 class Robo  //identificador da classe
 {
-	public:  //especificador de acesso
-		int velocidade = 100;  //atributos
+    public:  //especificador de acesso
+        int velocidade = 100;  //atributos
 };
 ```
 
@@ -44,16 +44,16 @@ print(roboSumo.velocidade)  #print do atributo velocidade do objeto criado
 ```cpp
 class Robo  //identificador da classe
 {
-	public:  //especificador de acesso
-		int velocidade = 100;  //atributos
+    public:  //especificador de acesso
+        int velocidade = 100;  //atributos
 };
 
 Robo roboSeguidor;  //criacao do objeto roboSeguidor
 
 void setup() 
 {
-	Serial.begin(9600);  //*iniciando o monitor serial a 9600 baudrate (UNO)
-	Serial.print(roboSeguidor.velocidade);  //print do atributo velocidade do objeto criado
+    Serial.begin(9600);  //*iniciando o monitor serial a 9600 baudrate (UNO)
+    Serial.print(roboSeguidor.velocidade);  //print do atributo velocidade do objeto criado
 }
 
 void loop()
@@ -85,28 +85,27 @@ print(roboSumo.comprimento_roda)  #print do atributo comprimento_roda do objeto 
 ```cpp
 class Robo  //identificador da classe
 {
-	public:  //especificador de acesso
-		int velocidade;  //atributos
-		float diametro_roda;
-		float distancia_rodas;
-		float comprimento_roda;
-		Robo(int velocidade, float diametro_roda, float distancia_rodas)
-		{  //chamada do construtor
-			velocidade = velocidade;        //alteração dos atributos no momento
-			diametro_roda = diametro_roda;  //da criacao do objeto
-			distancia_rodas = distancia_rodas;
-			comprimento_roda = diametro_roda * 3.1415;
-		}
-		
+    public:  //especificador de acesso
+        int velocidade;  //atributos
+        float diametro_roda;
+        float distancia_rodas;
+        float comprimento_roda;
+        Robo(int velocidade, float diametro_roda, float distancia_rodas) //chamada do construtor
+        {  
+            velocidade = velocidade;        //alteração dos atributos no momento
+            diametro_roda = diametro_roda;  //da criacao do objeto
+            distancia_rodas = distancia_rodas;
+            comprimento_roda = diametro_roda * 3.1415;
+        }
 };
 
 Robo roboSeguidor(100, 5, 15);  //criacao do objeto roboSeguidor
                                 //com atributos personalizados
 void setup() 
 {
-	Serial.begin(9600);  //*iniciando o monitor serial a 9600 baudrate (UNO)
-	Serial.print(roboSeguidor.comprimento_roda);  //print do atributo comprimento_roda
-}                                               //do objeto criado
+    Serial.begin(9600);  //*iniciando o monitor serial a 9600 baudrate (UNO)
+    Serial.print(roboSeguidor.comprimento_roda);  //print do atributo comprimento_roda
+}                                                 //do objeto criado
 
 void loop() 
 {
@@ -143,37 +142,36 @@ while True:  #loop principal
 ```cpp
 class Robo  //identificador da classe
 {
-	public:  //especificador de acesso
-		int velocidade;  //atributos
-		float diametro_roda;
-		float distancia_rodas;
-		float comprimento_roda;
-		Robo(int velocidade, float diametro_roda, float distancia_rodas)
-		{  //chamada do construtor
-			velocidade = velocidade;        //alteração dos atributos no momento
-			diametro_roda = diametro_roda;  //da criacao do objeto
-			distancia_rodas = distancia_rodas;
-			comprimento_roda = diametro_roda * 3.1415;
-		}
+    public:  //especificador de acesso
+        int velocidade;  //atributos
+        float diametro_roda;
+        float distancia_rodas;
+        float comprimento_roda;
+        Robo(int velocidade, float diametro_roda, float distancia_rodas)  //chamada do construtor
+        {
+            velocidade = velocidade;        //alteração dos atributos no momento
+            diametro_roda = diametro_roda;  //da criacao do objeto
+            distancia_rodas = distancia_rodas;
+            comprimento_roda = diametro_roda * 3.1415;
+        }
 		
-		void hello_world()  //metodo da classe
-		{
-			Serial.println("Oi, eu sou um robo!");  //comandos do metodo
-		}
-		
+        void hello_world()  //metodo da classe
+        {
+            Serial.println("Oi, eu sou um robo!");  //comandos do metodo
+        }		
 };
 
 Robo roboSeguidor(100, 5, 15);  //criacao do objeto roboSeguidor
                                 //com atributos personalizados
 void setup() 
 {
-	Serial.begin(9600);  //*iniciando o monitor serial a 9600 baudrate (UNO)
-	Serial.print(roboSeguidor.comprimento_roda);  //print do atributo comprimento_roda
-}                                               //do objeto criado
+    Serial.begin(9600);  //*iniciando o monitor serial a 9600 baudrate (UNO)
+    Serial.print(roboSeguidor.comprimento_roda);  //print do atributo comprimento_roda
+}                                                 //do objeto criado
 
 void loop()  //loop principal
 {
-	roboSeguidor.hello_world();  //chamada do metodo hello_world() do objeto criado
+    roboSeguidor.hello_world();  //chamada do metodo hello_world() do objeto criado
 }
 ```
 
